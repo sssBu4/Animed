@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="bg-gradient">
+        <div class="header d-flex align-items-center">
+            <img src="/icon/logo.svg">
+            <nav class="menu">
+                <ul class="menu-list d-flex p">
+                    <li><a href="#">Main</a></li>
+                    <li><a href="#">Top 100</a></li>
+                    <li><a href="#">Collections</a></li>
+                    <li><a href="#">News</a></li>
+                </ul>
+            </nav>
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Search...">
+                    <button id="search-button"><img src="/icon/search.svg"></button>
+                </div>
+                <div class="menu-profile">
+                    <a href="#"><img src="/icon/notifications.svg"></a>
+                    <a href="second_registration.html"><img src="/icon/profile.svg"></a>
+                </div>
+        </div>
+    </header>
+    <section class="bg-main layout-container">
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="/photo/main_1.png" width="1290" height="450">
+            </div>
+            <div class="swiper-slide">
+                <img src="/photo/register_2.png" width="1290" height="450">
+            </div>
+            <div class="swiper-slide">
+                <img src="/photo/register_2.png" width="1290" height="450">
+            </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-progress-bar">
+            <span class="swiper-pagination-bulet"></span>
+            <span class="swiper-pagination-bulet"></span>
+            <span class="swiper-pagination-bulet"></span>
+            </div>
+            
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
