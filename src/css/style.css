@@ -32,7 +32,6 @@
 h1,
 .h1 {
  font-size: 6.75rem;
- line-height: 1.14px;
  font-weight: 700;
 }
 
@@ -45,22 +44,19 @@ h2,
 h3,
 .h3 {
     font-size: 3.25rem;
-    line-height: 1.14px;
     font-weight: 700;
 }
 
 h4,
 .h4 {
-    font-size: 2.25rem;
-    line-height: 1.14px;
-    font-weight: 700;
+    font-size: 1.875rem;
+    font-weight: 400;
 }
 
 h5,
 .h5 {
     font-size: 1.75rem;
     font-weight: 500;
-    line-height: 1.14px;
 }
 
 p,
@@ -87,98 +83,158 @@ p,
 
 /*Swiper*/
 
- .swiper {
-        width: 1290px;
-        display: flex;
-        margin-left: 155px;
-        background: #000;
-        height: 450px;
-        overflow: hidden;
-        position: absolute;
-        top: 40px;
-        border-radius: 5px;
+.swiper {
+  width: 1290px;
+  display: flex;
+  margin: auto;
+  background: #000;
+  height: 450px;
+  overflow: hidden;
+  position: absolute;
+  top: 40px;
+  border-radius: 5px;
 }
 
-.swiper,swiper-container {
-      margin-top: 0;
-      margin-right: 0;
-      position: relative;
-      overflow: hidden;
-      list-style: none;
-      padding: 0;
-      z-index: 1;
-      display: block
+.swiper, .swiper-container {
+  margin-top: 0;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+  display: block;
 }
-  
+
 .swiper-slide {
-      text-align: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Додано для позиціонування тексту */
 }
-  
+
 .swiper-slide img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
+
+.slide-caption {
+  position: absolute;
+  top: 84px; /* Відступ від нижнього краю слайда */
+  left: 285px;
+  transform: translateX(-50%);
+  border-radius: 5px;
+  max-width: 80%; /* Обмеження ширини текстового блоку */
+  text-align: start; /* Вирівнювання тексту по центру */
+  color: white; /* Колір тексту */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 388px;
   
+}
+
+.slide-caption h4 {
+  margin: 0;
+  font-size: 15px;
+  color: #BDBFCD;
+}
+
+.slide-caption p {
+  font-size: 16px;
+}
+
+.btn-watch {
+  padding: 16px 44px;
+  font-size: 16px;
+  font-weight: bold;
+  gap: 10px;
+  background-color: #583DFF;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  margin-right: 25px;
+  align-items: center;
+  color: #FBFBFF;
+}
+
+.watch-play {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+}
+
+.btn-trailer {
+  padding: 16px 57.5px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  color: #583DFF;
+}
+
+.btn-trailer:hover, .btn-watch:hover {
+  transform: scale(1.05);
+}
+
 .autoplay-progress {
-      position: absolute;
-      right: 16px;
-      bottom: 16px;
-      z-index: 10;
-      width: 48px;
-      height: 48px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      color: var(--swiper-theme-color);
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  z-index: 10;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: var(--swiper-theme-color);
 }
-  
+
 .autoplay-progress svg {
-      --progress: 0;
-      position: absolute;
-      left: 0px;
-      top: 0px;
-      z-index: 10;
-      width: 100%;
-      height: 100%;
-      stroke-width: 4px;
-      stroke: var(--swiper-theme-color);
-      fill: none;
-      stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
-      stroke-dasharray: 125.6;
-      transform: rotate(-90deg);
+  --progress: 0;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  stroke-width: 4px;
+  stroke: var(--swiper-theme-color);
+  fill: none;
+  stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
+  stroke-dasharray: 125.6;
+  transform: rotate(-90deg);
 }
 
 .swiper-pagination {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 10px;
-      margin-bottom: 50px;
-      margin-left: 330px;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 22px;
+  padding-right: 30px;
+  justify-content: flex-end;
 }
 
 .swiper-pagination-bullet {
-      width: 20px;
-      height: 8px;
-      border-radius: 2px;
-      background-color: rgba(251, 251, 255, 1);
-      opacity: 0.5;
-      margin: 0 5px;
-      transition: width 0.8s ease-out;
+  width: 20px;
+  height: 8px;
+  border-radius: 2px;
+  background-color: rgba(251, 251, 255, 1);
+  opacity: 0.5;
+  margin: 0 5px;
+  transition: width 0.8s ease-out;
 }
-      
-      
+
 .swiper-pagination-bullet-active {
-      opacity: 1;
-      width: 50px;
-      background-color: #583DFF;
+  opacity: 1;
+  width: 50px;
+  background-color: #583DFF;
 }
+
 
 /*Links*/
 
@@ -238,6 +294,7 @@ button {
   align-items: center;
   cursor: pointer;
 }
+
 
 .btn-facebok {
   padding: 16px 100px 16px 92px;
@@ -313,6 +370,7 @@ button {
 .icon-active-profile {background-image:url(/icon/active_profile.svg) ;}
 .icon-notifications {background-image:url(/icon/notifications.svg) ;}
 .icon-profile {background-image:url(/icon/profile.svg) ;}
+.icon-play {background-image: url(/icon/play.svg);}
 .icon-bxs-login {background-image:url(/icon/bxs_log-in.svg) ;}
 .icon-frame-register {background-image: url(/icon/frame-register.svg);}
 .icon-star {background-image: url(/icon/Star.svg);}
@@ -352,6 +410,7 @@ header {
 .menu-list {
   gap: 25px;
   font-size: 16px;
+  white-space: nowrap;
 }
 
 .menu-list a {
@@ -385,7 +444,7 @@ input {
   border: none;
   border-bottom-left-radius: 5px;
   border-top-left-radius: 5px;
-  height: 43px;
+  height: 40px;
   width: 293px;
   flex: 1;
   transition: color 0.3s ease, background-color 0.3s ease;
@@ -396,7 +455,7 @@ input {
   transition: fill 0.3s ease;
 }
 .menu-btn {
-  padding: 11px 10px 12px 10px;
+  padding: 10px 10px 10px 10px;
   background-color: #FBFBFF;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -438,3 +497,7 @@ input {
 
 /*Seaction*/
 
+main {
+  background-color: #101011;
+  height: 4500px;
+}
