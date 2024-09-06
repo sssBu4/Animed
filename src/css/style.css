@@ -24,7 +24,6 @@
 *,
 *::before,
 *::after {
-    box-sizing: inherit;
     margin: 0px;
     font-family: 'Ubuntu';
 }
@@ -80,6 +79,9 @@ p,
   left: -75px;
 }
 
+.main-page {
+  height: 490px;
+}
 
 /*Swiper*/
 
@@ -236,6 +238,32 @@ p,
 }
 
 
+/* Popular Anime section*/
+
+.pop-anime {
+  margin-top: 106px;
+}
+
+.section-title {
+  flex-direction: row;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.popular-title {
+  color: #FBFBFF;
+}
+
+.btn-more {
+  font-size: 18px;
+  font-weight: bold;
+  gap: 10px;
+  display: flex;
+  color: #583DFF;
+}
+
 /*Links*/
 
 a {
@@ -374,6 +402,7 @@ button {
 .icon-bxs-login {background-image:url(/icon/bxs_log-in.svg) ;}
 .icon-frame-register {background-image: url(/icon/frame-register.svg);}
 .icon-star {background-image: url(/icon/Star.svg);}
+.icon-btn-plus {background-image: url(/icon/btn-plus.svg);}
 
 /*Header*/
 
