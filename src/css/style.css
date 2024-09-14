@@ -81,6 +81,7 @@ p,
 
 .main-page {
   height: 490px;
+  margin-bottom: 106px;
 }
 
 /*Swiper*/
@@ -241,13 +242,14 @@ p,
 /* Popular Anime section*/
 
 .pop-anime {
-  margin-top: 106px;
+  margin: auto;
+  max-width: 1290px;
 }
 
 .section-title {
   flex-direction: row;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   margin-bottom: 40px;
 }
@@ -262,6 +264,87 @@ p,
   gap: 10px;
   display: flex;
   color: #583DFF;
+  text-decoration: none;
+}
+
+.btn-more:active {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/*pop swiper*/
+
+.swiperPop {
+  width: 100%;
+  height: 300px;
+  position: relative;
+}
+
+.swiper-wrapper-pop {
+  display: flex; /* Встановлюємо флекс-контейнер для горизонтального вирівнювання */
+  flex-direction: row; /* Гортаємо слайди горизонтально */
+}
+
+.swiper-slide-pop {
+  text-align: center;
+  font-size: 18px;
+  background: #101011;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px; /* Фіксована ширина для кожного слайду */
+}
+
+.swiper-slide-pop img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiperPop {
+  width: 100%;
+  height: 300px;
+  margin: 20px auto;
+}
+
+.append-buttons-pop {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.append-buttons-pop button {
+  display: inline-block;
+  cursor: pointer;
+  border: 1px solid #007aff;
+  color: #007aff;
+  text-decoration: none;
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin: 0 10px;
+  font-size: 13px;
+}
+
+/* Стилі для стрілок */
+.swiper-button-next, .swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  height: 35px;
+  width: 35px;
+  background-color: #583DFF;
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.swiper-button-next {
+  right: 10px;
+}
+
+.swiper-button-prev {
+  left: 10px;
 }
 
 /*Links*/
