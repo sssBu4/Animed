@@ -119,7 +119,7 @@ p,
 .swiper-slide img {
   display: block;
   width: 100%;
-  height: 100%;
+ 
   object-fit: cover;
 }
 
@@ -331,7 +331,7 @@ p,
   top: 50%;
   transform: translateY(-50%);
   z-index: 10;
-  height: 35px;
+  height: 30px;
   width: 35px;
   background-color: #583DFF;
   color: white;
@@ -356,78 +356,6 @@ a {
 
 a:hover {
     color: var(--color-blue);
-}
-
-/*register*/
-.login-box {
-  padding-top: 183px;
-  margin-left: 155px;
-  position: relative;
-  width: 410px;
-  height: 533px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.login-title {
-  padding-bottom: 35px;
-  align-items: center;
-  justify-content: center;
-}
-
-.input-box {
-  position: relative;
-  padding-bottom: 15px;
-  width: 410px;
-}
-
-.input-box input {
-  width: 100%;
-  height: 56px;
-  padding-left: 15px;
-  border-radius: 5px;
-  border-color: rgba(88, 61, 255, 1);
-  font-size: 2rem;
-}
-
-input:focus {
-  outline: none;
-}
-
-.btn {
- padding: 16px 105px 16px 112px;
- border-radius: 5px;
- border: 0px;
-}
-
-button {
-  align-items: center;
-  cursor: pointer;
-}
-
-
-.btn-facebok {
-  padding: 16px 100px 16px 92px;
-  border-radius: 5px;
-  border: 0px;
-}
-.btn-google {
-  padding: 16px 103px 16px 107px;
-  border-radius: 5px;
-  margin-bottom: 15px;
-  border: 0px;
-}
-.rating {
-  position: absolute;
-  top: 10px;
-  right: 0px;
-  background-color: rgba(88, 61, 255, 1);
-  color: #fff;
-  width: 50px;
-  padding: 3.5px 10px 3.5px 45px;
-  align-items: center;
-  font-size: 16px;
 }
 
 /*Icons*/
@@ -613,3 +541,6 @@ main {
   background-color: #101011;
   height: 4500px;
 }
+
+/*Pop Anime*/
+

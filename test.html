@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>PopSwiper з центруванням стартового слайда</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    /* Обмежуємо розмір Swiper */
+    .pop-swiper {
+      width: 80%;
+      max-width: 1200px;
+      height: 300px;
+    }
+    .swiper-slide {
+      background: #fff;
+      border: 1px solid #ddd;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.5em;
+      transition: transform 0.3s ease;
+    }
+    /* Активний слайд трохи збільшуємо */
+    .swiper-slide-active {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <!-- Контейнер для Swiper -->
+  <div class="pop-swiper swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">Слайд 1</div>
+      <div class="swiper-slide">Слайд 2</div>
+      <div class="swiper-slide">Слайд 3</div>
+      <div class="swiper-slide">Слайд 4</div>
+      <div class="swiper-slide">Слайд 5</div>
+      <div class="swiper-slide">Слайд 6</div>
+      <div class="swiper-slide">Слайд 7</div>
+    </div>
+    <!-- Пагінація (опціонально) -->
+    <div class="swiper-pagination"></div>
+    <!-- Кнопки навігації (опціонально) -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+
+  <!-- Підключення Swiper -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    const popSwiper = new Swiper('.pop-swiper', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 5,      // Показуємо 5 слайдів
+      spaceBetween: 10,      // Відстань між слайдами
+      initialSlide: 3,       // Починаємо з центрального слайда (4-го за індексом 3)
+      coverflowEffect: {
+        rotate: 30,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+</body>
+</html>
+
+

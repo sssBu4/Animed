@@ -21,6 +21,11 @@
     --container-pad: 4rem;
 }
 
+body {
+  height: 100%;
+  background-color: var(--color-register-bg);
+}
+
 *,
 *::before,
 *::after {
@@ -136,12 +141,13 @@ p:last-child {
         background: #000;
         align-items: flex-start;
         justify-content: flex-start;
-        height: 900px;
+        height: 818px;
         overflow: hidden;
         position: relative;
         border-radius: 5px;
       }
       .swiper,swiper-container {
+        margin-left: 0;
         margin-top: 0;
         margin-right: 0;
         position: relative;
@@ -250,8 +256,7 @@ a:hover {
 
 /*register*/
 .login-box {
-  padding-top: 183px;
-  margin-left: 155px;
+  margin: auto;
   position: relative;
   width: 410px;
   height: 533px;
@@ -259,6 +264,7 @@ a:hover {
   justify-content: center;
   align-items: center;
 }
+
 
 .login-title {
   padding-bottom: 35px;
@@ -294,15 +300,16 @@ input:focus {
 button {
   align-items: center;
   cursor: pointer;
+  width: 410px;
 }
 
 .btn-facebok {
-  padding: 16px 100px 16px 92px;
+  padding: 16px 94px 16px 110px;
   border-radius: 5px;
   border: 0px;
 }
 .btn-google {
-  padding: 16px 103px 16px 107px;
+  padding: 16px 94px 16px 110px;
   border-radius: 5px;
   margin-bottom: 15px;
   border: 0px;
@@ -319,6 +326,66 @@ button {
   font-size: 16px;
 }
 
+.section-form {
+  
+  display: flex;
+  background-color: var(--color-register-bg);
+}
+
+@media screen and (max-width: 424px) {
+  .login-box {
+    margin: auto;
+    margin-top: 50px;
+  }
+  .input-box {
+    width: 345px;
+  }
+
+  .swiper {
+    display: none;
+  }
+
+  button {
+    width: 345px;
+    margin: auto;
+  }
+}
+
+@media (min-width: 425px) and (max-width: 767px) {
+  .login-box {
+    margin: auto;
+    margin-top: 100px;
+  }
+  .input-box {
+    width: 385px;
+  }
+  .swiper {
+    display: none;
+  }
+
+  button {
+    width: 385px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .login-box {
+   margin-top: 120px;
+  }
+
+  .input-box {
+    width: 385px;
+  }
+
+  .swiper {
+    display: none;
+  }
+
+  button {
+    width: 385px;
+  }
+  
+}
 
 /*Display*/
 
@@ -509,7 +576,7 @@ button {
 /*Icons*/
 
 .icon-bxs-login {
-  width: 14px;
+  width: 17px;
   height: 20px;
   background-repeat: no-repeat;
 }
@@ -524,7 +591,7 @@ button {
 
 .icon-facebok,
 .icon-google {
-  width: 24px;
+  width: 28px;
   height: 24px;
   background-repeat: no-repeat;
 }
